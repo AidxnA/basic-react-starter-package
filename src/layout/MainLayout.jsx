@@ -1,11 +1,12 @@
+
 import { Outlet } from 'react-router'
+import Navbar from '../components/Navbar'
 
 const MainLayout = () => {
 	return (
 		<>
-			<h3>Header component</h3>
+			<Navbar />
 			<Outlet />
-			<h3>Footer component</h3>
 		</>
 	)
 }

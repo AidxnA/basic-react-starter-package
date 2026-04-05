@@ -1,6 +1,7 @@
 import { Button } from 'flowbite-react'
 import { FaBeer } from 'react-icons/fa'
 import { toast } from 'sonner'
+import Hero from '../components/Hero'
 
 const HomePage = () => {
 	const handleSubmit = () => {
@@ -10,11 +11,8 @@ const HomePage = () => {
 		// toast.error('toast is working!')
 	}
 	return (
-		<section>
-			<h3>this is HomePage</h3>
-			<Button onClick={handleSubmit} color={'alternative'}>
-				Click Me <FaBeer />
-			</Button>
+		<section classNameName="pt-20">
+			<Hero/>
 		</section>
 	)
 }

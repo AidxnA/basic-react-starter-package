@@ -1,20 +1,44 @@
 import React from 'react'
 import { IoIosNotifications } from 'react-icons/io'
 import { IoSearchSharp, IoSettingsSharp } from 'react-icons/io5'
-import { Link } from 'react-router'
+import { Link, useLocation  } from 'react-router'
+
 
 
 const Navbar = () => {
+  const location = useLocation()
+  const isActive = (path) => location.pathname === path
+
   return (
     <div>
       <header className="fixed top-0 w-full z-50 bg-slate-950/85 backdrop-blur-xl flex items-center justify-between px-8 h-20 w-full shadow-[0_36px_36px_rgba(0,0,0,0.08)]">
         <div className="flex items-center gap-12">
           <span className="text-2xl font-black tracking-tighter text-slate-50 dark:text-slate-50">NavLink</span>
           <nav className="hidden md:flex gap-8 items-center h-full">
-            <Link className="text-xl font-['Inter'] tracking-tight label-md:text-sm text-green-500 font-bold border-b-2 border-green-500 pb-1" to="/">Dashboard</Link>
-            <Link className="text-xl font-['Inter'] tracking-tight label-md:text-sm text-slate-400 hover:text-slate-100 transition-colors" to="/">Routes</Link>
-            <Link className="text-xl font-['Inter'] tracking-tight label-md:text-sm text-slate-400 hover:text-slate-100 transition-colors" to="/">Analytics</Link>
-            <Link className="text-xl font-['Inter'] tracking-tight label-md:text-sm text-slate-400 hover:text-slate-100 transition-colors" to="/">Subscription</Link>
+            <Link
+              className={`text-xl font-['Inter'] tracking-tight label-md:text-sm ${isActive('/dashboard') ? 'text-green-500 font-bold border-b-2 border-green-500 pb-1' : 'text-slate-400 hover:text-slate-100 transition-colors'}`}
+              to="/dashboard"
+            >
+              Dashboard
+            </Link>
+            <Link
+              className={`text-xl font-['Inter'] tracking-tight label-md:text-sm ${isActive('/routes') ? 'text-green-500 font-bold border-b-2 border-green-500 pb-1' : 'text-slate-400 hover:text-slate-100 transition-colors'}`}
+              to="/routes"
+            >
+              Routes
+            </Link>
+            <Link
+              className={`text-xl font-['Inter'] tracking-tight label-md:text-sm ${isActive('/analytics') ? 'text-green-500 font-bold border-b-2 border-green-500 pb-1' : 'text-slate-400 hover:text-slate-100 transition-colors'}`}
+              to="/analytics"
+            >
+              Analytics
+            </Link>
+            <Link
+              className={`text-xl font-['Inter'] tracking-tight label-md:text-sm ${isActive('/subscription') ? 'text-green-500 font-bold border-b-2 border-green-500 pb-1' : 'text-slate-400 hover:text-slate-100 transition-colors'}`}
+              to="/subscription"
+            >
+              Subscription
+            </Link>
           </nav>
         </div>
         <div className="flex items-center gap-6">

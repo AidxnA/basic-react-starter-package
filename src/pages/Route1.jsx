@@ -1,8 +1,9 @@
 import React from 'react'
+import RouteDirection from '../components/RouteDirection'
 
 const Route1 = () => {
   return (
-    <div>Route 1</div>
+    <div className= "pt-20"><RouteDirection/></div>
   )
 }
 

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
     return (
-        <footer className="absolute bottom-0 w-full py-12 border-t border-slate-900 bg-slate-950">
+        <footer className="w-full py-12 border-t border-slate-900 bg-slate-950">
             <div className="flex flex-col md:flex-row justify-between items-center px-12 max-w-full">
                 <div className="flex flex-col md:items-start mb-8 md:mb-0">
                     <span className="text-lg font-bold text-slate-200">NavLink Kinetic Cartography</span>

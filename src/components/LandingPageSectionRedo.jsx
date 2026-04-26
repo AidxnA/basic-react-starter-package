@@ -11,7 +11,7 @@ const LandingPageSectionRedo = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 h-full">
         <div className="md:col-span-2 bg-surface-container-low rounded-xl p-10 flex flex-col justify-between overflow-hidden relative min-h-64">
           <div className="relative z-10">
-            <span className="text-on-tertiary-container text-5xl mb-6"><CiMap /></span>
+            <span className="text-on-tertiary-container text-5xl mb-6 bg-green-300"><CiMap /></span>
             <h2 className="text-4xl font-black text-primary tracking-tighter mb-4 leading-none">Global Offline Cartography</h2>
             <p className="text-on-secondary-container text-lg max-w-sm">Precision navigation doesn't require a connection. Download entire regions with sub-meter accuracy.</p>
           </div>
